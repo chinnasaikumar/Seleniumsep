@@ -18,9 +18,11 @@ public class Tutorialdemo {
 		WebElement search= driver.findElement(By.name("search"));
 		Thread.sleep(2000);
 		search.sendKeys("mac"+Keys.ENTER);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		driver.findElement(By.linkText("MacBook")).click();
 		Thread.sleep(2000);
+		String title=driver.getTitle();
+		System.out.println("The title of the page is :"+title);
 		driver.close();
 
 	}
